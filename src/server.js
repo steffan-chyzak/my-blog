@@ -8,6 +8,22 @@ import path from "path";
 // install node demon via   npm install --save-dev nodemon
 // then run   npx nodemon --exec npx babel-node src/server.js   we are telling nodemon to run whatever command we put after the --exec. This refreshes the server when our files change.
 
+// Test data below to run locally if you're not running it in a database remotely.
+// const articlesInfo = {
+// 	"learn-react": {
+// 		upvotes: 0,
+// 		comments: [],
+// 	},
+// 	"learn-node": {
+// 		upvotes: 0,
+// 		comments: [],
+// 	},
+// 	"my-thoughts-on-resumes": {
+// 		upvotes: 0,
+// 		comments: [],
+// 	},
+// };
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, "/build")));
